@@ -95,9 +95,9 @@ function updateEffect(type) {
   }
 
   if (filterEffect === 'none') {
-    sliderElement.setAttribute('disabled', true);
+    sliderElement.style.visibility = 'hidden';
   } else {
-    sliderElement.removeAttribute('disabled');
+    sliderElement.style.visibility = 'visible';
   }
   updateSlider(min, max, step);
 }
@@ -128,7 +128,7 @@ function createSliderElement() {
     valueElement.value = sliderElement.noUiSlider.get();
     applyEffect(valueElement.value);
   });
-  sliderElement.setAttribute('disabled', true);
+  sliderElement.style.visibility = 'hidden';
 }
 
 function applyEffect(value) {
