@@ -26,6 +26,7 @@ function disassembleEffects() {
   for(let i = 0; i < buttonArray.length; i++) {
     buttonArray[i].removeEventListener('click', eventListeners[i]);
   }
+  updateEffect('none');
   sliderElement.noUiSlider.destroy();
 }
 
